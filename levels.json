@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "minClient": 1,
+  "levels": ["Level_01", "Level_02", "Level_03", "Level_04", "Level_05"]
+}
