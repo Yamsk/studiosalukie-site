@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Emerji — Remote Config</title>
+<style>
+  :root { --bg:#15131a; --panel:#1e1b26; --line:#332e40; --ink:#ece8f5; --muted:#a79fbd; --accent:#7c5cff; --good:#3ecf8e; --bad:#ff6b6b; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:18px 22px; border-bottom:1px solid var(--line); display:flex; align-items:baseline; gap:12px; }
+  header h1 { margin:0; font-size:18px; } header .sub { color:var(--muted); font-size:13px; }
+  main { max-width:820px; margin:0 auto; padding:22px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; margin-bottom:18px; }
+  .panel h2 { margin:0 0 4px; font-size:14px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+  .row { display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; }
+  label { display:flex; flex-direction:column; gap:4px; font-size:12px; color:var(--muted); }
+  input[type=text], input[type=password], input[type=number], textarea {
+    background:#0f0d14; border:1px solid var(--line); color:var(--ink); border-radius:8px; padding:9px 10px; font:inherit; }
+  input[type=number] { width:120px; } input[type=text] { min-width:220px; }
+  textarea { width:100%; min-height:150px; resize:vertical; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; }
+  .toggle { flex-direction:row; align-items:center; gap:8px; color:var(--ink); font-size:14px; }
+  button { background:var(--accent); color:#fff; border:0; border-radius:8px; padding:10px 16px; font:inherit; font-weight:600; cursor:pointer; }
+  button.ghost { background:transparent; border:1px solid var(--line); color:var(--ink); }
+  button:disabled { opacity:.5; cursor:not-allowed; }
+  .actions { display:flex; gap:10px; align-items:center; }
+  #status { margin-left:auto; font-size:13px; color:var(--muted); }
+  #log { white-space:pre-wrap; font-family:ui-monospace,Menlo,monospace; font-size:12.5px; color:var(--muted); max-height:180px; overflow:auto; }
+  pre#preview { background:#0f0d14; border:1px solid var(--line); border-radius:8px; padding:12px; overflow:auto; font-size:12.5px; }
+  a { color:var(--accent); } .hint { color:var(--muted); font-size:12px; margin-top:8px; }
+  .ok { color:var(--good); } .err { color:var(--bad); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Emerji — Remote Config</h1>
+  <span class="sub">edits the live <code>levels.json</code> · git-versioned</span>
+</header>
+<main>
+
+  <div class="panel">
+    <h2>Connection</h2>
+    <div class="row">
+      <label>Owner<input type="text" id="owner" value="Yamsk"></label>
+      <label>Repo<input type="text" id="repo" value="studiosalukie-site"></label>
+      <label>Branch<input type="text" id="branch" value="main"></label>
+      <label style="flex:1">Path<input type="text" id="path" value="levels.json" style="width:100%"></label>
+    </div>
+    <div class="row">
+      <label style="flex:1">GitHub token <span style="opacity:.7">(fine-grained · Contents: Read+Write on this repo only · stored in this browser)</span>
+        <input type="password" id="token" placeholder="github_pat_…" style="width:100%"></label>
+    </div>
+    <div class="row"><button id="load">Load current</button><span id="status"></span></div>
+    <div class="hint">Reading is public; only <b>Save</b> needs the token. Create one at GitHub → Settings → Developer settings → Fine-grained tokens.</div>
+  </div>
+
+  <div class="panel">
+    <h2>Meta</h2>
+    <div class="row">
+      <label>version<input type="number" id="version" value="1" min="0"></label>
+      <label>minClient<input type="number" id="minClient" value="1" min="0"></label>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2><label class="toggle"><input type="checkbox" id="incEconomy" checked> Economy</label></h2>
+    <div class="row" id="economyFields">
+      <label>energyMax<input type="number" id="energyMax" value="5" min="1"></label>
+      <label>energyRegenSeconds<input type="number" id="energyRegenSeconds" value="1200" min="0"></label>
+      <label>energylessCost<input type="number" id="energylessCost" value="100" min="0"></label>
+      <label>startingCoins<input type="number" id="startingCoins" value="0" min="0"></label>
+      <label>minSellPrice<input type="number" id="minSellPrice" value="5" min="0"></label>
+      <label>starReward1<input type="number" id="starReward1" value="1" step="0.1" min="0"></label>
+      <label>starReward2<input type="number" id="starReward2" value="1.5" step="0.1" min="0"></label>
+      <label>starReward3<input type="number" id="starReward3" value="2" step="0.1" min="0"></label>
+    </div>
+    <div class="hint">Unchecked = no economy block sent → the app keeps its authored defaults.</div>
+  </div>
+
+  <div class="panel">
+    <h2><label class="toggle"><input type="checkbox" id="incLevels" checked> Roster</label></h2>
+    <label style="width:100%">Level names, one per line, in play order (must exist in the app's LevelCatalog pool)
+      <textarea id="levels">Level_01
+Level_02
+Level_03
+Level_04
+Level_05</textarea></label>
+    <div class="hint">Appending is safe; reordering/removing shifts an existing player's current level.</div>
+  </div>
+
+  <div class="panel">
+    <h2>Publish</h2>
+    <div class="actions">
+      <button class="ghost" id="preview">Preview JSON</button>
+      <button id="save" disabled>Save to GitHub</button>
+      <span id="status2"></span>
+    </div>
+    <pre id="preview-out" style="display:none"></pre>
+    <div id="log" style="margin-top:12px"></div>
+  </div>
+
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var sha = null;
+  var API = "https://api.github.com";
+
+  // token persistence
+  $("token").value = localStorage.getItem("emerji_rc_token") || "";
+  $("token").addEventListener("change", function () { localStorage.setItem("emerji_rc_token", $("token").value.trim()); });
+  ["owner","repo","branch","path"].forEach(function (k) {
+    var v = localStorage.getItem("emerji_rc_" + k); if (v) $(k).value = v;
+    $(k).addEventListener("change", function () { localStorage.setItem("emerji_rc_" + k, $(k).value.trim()); });
+  });
+
+  function log(msg, cls) { var el = $("log"); el.innerHTML += '<div class="' + (cls || "") + '">' + msg + "</div>"; el.scrollTop = el.scrollHeight; }
+  function status(el, msg, cls) { $(el).className = cls || ""; $(el).textContent = msg; }
+  function b64encode(s) { return btoa(unescape(encodeURIComponent(s))); }
+  function b64decode(s) { return decodeURIComponent(escape(atob(s.replace(/\n/g, "")))); }
+  function headers() { var h = { "Accept": "application/vnd.github+json" }; var t = $("token").value.trim(); if (t) h["Authorization"] = "Bearer " + t; return h; }
+  function contentsUrl() { return API + "/repos/" + $("owner").value.trim() + "/" + $("repo").value.trim() + "/contents/" + $("path").value.trim(); }
+
+  function buildConfig() {
+    var cfg = { version: +$("version").value, minClient: +$("minClient").value };
+    if ($("incEconomy").checked) cfg.economy = {
+      energyMax: +$("energyMax").value, energyRegenSeconds: +$("energyRegenSeconds").value,
+      energylessCost: +$("energylessCost").value, startingCoins: +$("startingCoins").value,
+      minSellPrice: +$("minSellPrice").value, starReward1: +$("starReward1").value,
+      starReward2: +$("starReward2").value, starReward3: +$("starReward3").value
+    };
+    if ($("incLevels").checked)
+      cfg.levels = $("levels").value.split("\n").map(function (s) { return s.trim(); }).filter(Boolean);
+    return cfg;
+  }
+
+  function fillForm(cfg) {
+    if (typeof cfg.version === "number") $("version").value = cfg.version;
+    if (typeof cfg.minClient === "number") $("minClient").value = cfg.minClient;
+    $("incEconomy").checked = !!cfg.economy;
+    if (cfg.economy) Object.keys(cfg.economy).forEach(function (k) { if ($(k)) $(k).value = cfg.economy[k]; });
+    $("incLevels").checked = Array.isArray(cfg.levels);
+    if (Array.isArray(cfg.levels)) $("levels").value = cfg.levels.join("\n");
+  }
+
+  $("load").addEventListener("click", function () {
+    status("status", "loading…");
+    fetch(contentsUrl() + "?ref=" + encodeURIComponent($("branch").value.trim()) + "&t=" + Date.now(), { headers: headers() })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status + " — " + (r.status === 404 ? "file not found" : r.status === 401 ? "bad token" : "load failed")); return r.json(); })
+      .then(function (j) {
+        sha = j.sha;
+        var cfg = JSON.parse(b64decode(j.content));
+        fillForm(cfg);
+        status("status", "loaded ✓ (sha " + sha.slice(0, 7) + ")", "ok");
+        $("save").disabled = false;
+        log("Loaded current config.");
+      })
+      .catch(function (e) { status("status", e.message, "err"); log("Load error: " + e.message, "err"); });
+  });
+
+  $("preview").addEventListener("click", function () {
+    var out = $("preview-out"); out.style.display = "block"; out.textContent = JSON.stringify(buildConfig(), null, 2);
+  });
+
+  $("save").addEventListener("click", function () {
+    var t = $("token").value.trim();
+    if (!t) { status("status2", "paste a token first", "err"); return; }
+    var cfg = buildConfig();
+    if (!cfg.economy && !cfg.levels) { status("status2", "nothing to publish (enable a section)", "err"); return; }
+    localStorage.setItem("emerji_rc_token", t);
+    status("status2", "saving…");
+    var body = { message: "Update remote config (admin)", content: b64encode(JSON.stringify(cfg, null, 2) + "\n"), branch: $("branch").value.trim() };
+    if (sha) body.sha = sha;
+    fetch(contentsUrl(), { method: "PUT", headers: headers(), body: JSON.stringify(body) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) {
+          if (res.status === 409) throw new Error("conflict — someone else edited it; click Load, redo, Save");
+          throw new Error((res.j && res.j.message) || ("HTTP " + res.status));
+        }
+        sha = res.j.content.sha;
+        status("status2", "saved ✓", "ok");
+        log('Committed: <a href="' + res.j.commit.html_url + '" target="_blank">' + res.j.commit.sha.slice(0, 7) + "</a> — live in ~1–2 min (Pages rebuild + CDN).", "ok");
+      })
+      .catch(function (e) { status("status2", "save failed", "err"); log("Save error: " + e.message, "err"); });
+  });
+})();
+</script>
+</body>
+</html>
