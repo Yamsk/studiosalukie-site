@@ -7,9 +7,11 @@
     "energylessCost": 100,
     "startingCoins": 0,
     "minSellPrice": 5,
-    "starReward1": 1.0,
+    "starReward1": 1,
     "starReward2": 1.5,
-    "starReward3": 2.0
+    "starReward3": 2
   },
-  "levels": ["Level_01", "Level_02", "Level_03", "Level_04", "Level_05"]
+  "levels": [
+    "Level_05"
+  ]
 }
