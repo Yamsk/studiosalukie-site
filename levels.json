@@ -1,5 +1,15 @@
 {
   "version": 1,
   "minClient": 1,
+  "economy": {
+    "energyMax": 5,
+    "energyRegenSeconds": 1200,
+    "energylessCost": 100,
+    "startingCoins": 0,
+    "minSellPrice": 5,
+    "starReward1": 1.0,
+    "starReward2": 1.5,
+    "starReward3": 2.0
+  },
   "levels": ["Level_01", "Level_02", "Level_03", "Level_04", "Level_05"]
 }
