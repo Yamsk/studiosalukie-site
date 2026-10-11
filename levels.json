@@ -1,22 +1,22 @@
 {
-  "version": 1,
+  "version": 2,
   "minClient": 1,
   "economy": {
     "energyMax": 5,
-    "energyRegenSeconds": 1200,
+    "energyRegenSeconds": 1800,
     "energyCoinCost": 100,
     "startingCoins": 0,
     "minSellPrice": 5,
-    "starReward1": 1,
+    "starReward1": 1.0,
     "starReward2": 1.5,
-    "starReward3": 2,
+    "starReward3": 2.0,
     "defaultCoinBase": 100,
     "defaultCoinPerLevel": 5,
     "defaultCoinMax": 500,
-    "defaultTokenEvery": 2,
-    "landBase": 4,
+    "defaultTokenEvery": 1,
+    "landBase": 2,
     "landStepLevels": 0,
-    "landMax": 4,
+    "landMax": 2,
     "tileMoveUnlockLevel": 10,
     "vendingIntroLevel": 1,
     "vendingTeachLevel": 2,
@@ -24,6 +24,635 @@
     "goalsUnlockLevel": 5,
     "starterOfferLevel": 4
   },
+  "store": {
+    "iap": [
+      {
+        "id": "coins_small",
+        "title": "Small Coin Pack",
+        "kind": "consumable",
+        "active": true,
+        "items": [
+          {
+            "kind": "Coins",
+            "amount": 1000
+          }
+        ]
+      },
+      {
+        "id": "coins_medium",
+        "title": "Medium Coin Pack",
+        "kind": "consumable",
+        "active": true,
+        "items": [
+          {
+            "kind": "Coins",
+            "amount": 3500
+          },
+          {
+            "kind": "Token",
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "id": "remove_ads",
+        "title": "Remove Ads",
+        "kind": "nonconsumable",
+        "active": true,
+        "removesAds": true
+      },
+      {
+        "id": "starter_pack",
+        "title": "Starter Pack",
+        "kind": "nonconsumable",
+        "active": false,
+        "removesAds": true,
+        "items": [
+          {
+            "kind": "Coins",
+            "amount": 2000
+          },
+          {
+            "kind": "Token",
+            "amount": 5
+          }
+        ]
+      }
+    ]
+  },
+  "vending": {
+    "cost": 1,
+    "pool": [
+      {
+        "kind": "Piece",
+        "id": "smalltree",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "flower_01",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "flower_02",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "treestump",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "pinetree",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "fallentrunk",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "haystack",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "firepit",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "tipitent",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "campingtentfbx",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "totem",
+        "weight": 1,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "sun",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "moon",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "snowflake",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "woodenstool",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "groundlantern",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "lantern",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "crate",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "pot",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "chest",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "stove",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "rockingchair",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "well",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "retrotv",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "retrocomputer",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "bunny",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "pig",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "cat",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "dog",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "carrot",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "peach",
+        "weight": 10,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "bamboo",
+        "weight": 5,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "dinofossil",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "jackolantern",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "skull",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "witchhat",
+        "weight": 2,
+        "unlockLevel": 0
+      },
+      {
+        "kind": "Piece",
+        "id": "starfish",
+        "weight": 10,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "buoy",
+        "weight": 10,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "anchor",
+        "weight": 5,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "parasol",
+        "weight": 5,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "sailboat",
+        "weight": 2,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "PropellorBoat",
+        "weight": 2,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "lighthouse",
+        "weight": 1,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "radio",
+        "weight": 5,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "handgesture_handshake",
+        "weight": 5,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "handgesture_peace",
+        "weight": 5,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "handgesture_thumbsup",
+        "weight": 5,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "handgesture_wavinghand",
+        "weight": 5,
+        "unlockLevel": 21
+      },
+      {
+        "kind": "Piece",
+        "id": "snowman",
+        "weight": 1,
+        "unlockLevel": 48
+      },
+      {
+        "kind": "Piece",
+        "id": "trafficcone",
+        "weight": 10,
+        "unlockLevel": 75
+      },
+      {
+        "kind": "Piece",
+        "id": "barricade",
+        "weight": 10,
+        "unlockLevel": 75
+      },
+      {
+        "kind": "Piece",
+        "id": "castlepillar",
+        "weight": 5,
+        "unlockLevel": 75
+      },
+      {
+        "kind": "Piece",
+        "id": "classicalpillar",
+        "weight": 5,
+        "unlockLevel": 75
+      },
+      {
+        "kind": "Piece",
+        "id": "torigate",
+        "weight": 5,
+        "unlockLevel": 75
+      },
+      {
+        "kind": "Piece",
+        "id": "knighthelmet",
+        "weight": 2,
+        "unlockLevel": 75
+      },
+      {
+        "kind": "Piece",
+        "id": "japanesedevilmask",
+        "weight": 2,
+        "unlockLevel": 75
+      },
+      {
+        "kind": "Piece",
+        "id": "castle",
+        "weight": 1,
+        "unlockLevel": 75
+      }
+    ]
+  },
+  "producers": [
+    {
+      "id": "smalltree",
+      "price": 50
+    },
+    {
+      "id": "flower_01",
+      "price": 50
+    },
+    {
+      "id": "flower_02",
+      "price": 50
+    },
+    {
+      "id": "treestump",
+      "price": 50
+    },
+    {
+      "id": "woodenstool",
+      "price": 50
+    },
+    {
+      "id": "groundlantern",
+      "price": 50
+    },
+    {
+      "id": "lantern",
+      "price": 50
+    },
+    {
+      "id": "crate",
+      "price": 50
+    },
+    {
+      "id": "carrot",
+      "price": 50
+    },
+    {
+      "id": "peach",
+      "price": 50
+    },
+    {
+      "id": "starfish",
+      "price": 50
+    },
+    {
+      "id": "buoy",
+      "price": 50
+    },
+    {
+      "id": "trafficcone",
+      "price": 50
+    },
+    {
+      "id": "barricade",
+      "price": 50
+    },
+    {
+      "id": "pinetree",
+      "price": 150
+    },
+    {
+      "id": "fallentrunk",
+      "price": 150
+    },
+    {
+      "id": "haystack",
+      "price": 150
+    },
+    {
+      "id": "firepit",
+      "price": 150
+    },
+    {
+      "id": "chest",
+      "price": 150
+    },
+    {
+      "id": "stove",
+      "price": 150
+    },
+    {
+      "id": "rockingchair",
+      "price": 150
+    },
+    {
+      "id": "well",
+      "price": 150
+    },
+    {
+      "id": "bunny",
+      "price": 150
+    },
+    {
+      "id": "pig",
+      "price": 150
+    },
+    {
+      "id": "bamboo",
+      "price": 150
+    },
+    {
+      "id": "sun",
+      "price": 150
+    },
+    {
+      "id": "moon",
+      "price": 150
+    },
+    {
+      "id": "snowflake",
+      "price": 150
+    },
+    {
+      "id": "anchor",
+      "price": 150
+    },
+    {
+      "id": "parasol",
+      "price": 150
+    },
+    {
+      "id": "castlepillar",
+      "price": 150
+    },
+    {
+      "id": "classicalpillar",
+      "price": 150
+    },
+    {
+      "id": "torigate",
+      "price": 150
+    },
+    {
+      "id": "handgesture_handshake",
+      "price": 150
+    },
+    {
+      "id": "handgesture_peace",
+      "price": 150
+    },
+    {
+      "id": "handgesture_thumbsup",
+      "price": 150
+    },
+    {
+      "id": "handgesture_wavinghand",
+      "price": 150
+    },
+    {
+      "id": "tipitent",
+      "price": 400
+    },
+    {
+      "id": "campingtentfbx",
+      "price": 400
+    },
+    {
+      "id": "retrotv",
+      "price": 400
+    },
+    {
+      "id": "retrocomputer",
+      "price": 400
+    },
+    {
+      "id": "cat",
+      "price": 400
+    },
+    {
+      "id": "dog",
+      "price": 400
+    },
+    {
+      "id": "dinofossil",
+      "price": 400
+    },
+    {
+      "id": "jackolantern",
+      "price": 400
+    },
+    {
+      "id": "skull",
+      "price": 400
+    },
+    {
+      "id": "witchhat",
+      "price": 400
+    },
+    {
+      "id": "sailboat",
+      "price": 400
+    },
+    {
+      "id": "PropellorBoat",
+      "price": 400
+    },
+    {
+      "id": "knighthelmet",
+      "price": 400
+    },
+    {
+      "id": "japanesedevilmask",
+      "price": 400
+    },
+    {
+      "id": "radio",
+      "price": 400
+    },
+    {
+      "id": "totem",
+      "price": 1000
+    },
+    {
+      "id": "lighthouse",
+      "price": 1000
+    },
+    {
+      "id": "snowman",
+      "price": 1000
+    },
+    {
+      "id": "castle",
+      "price": 1000
+    }
+  ],
   "levels": [
     "Level_01",
     "Level_02",
