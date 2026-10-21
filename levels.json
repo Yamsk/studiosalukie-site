@@ -12,7 +12,7 @@
     "starReward3": 2,
     "defaultCoinBase": 100,
     "defaultCoinPerLevel": 5,
-    "defaultCoinMax": 500,
+    "defaultCoinMax": 300,
     "defaultTokenEvery": 1,
     "landBase": 2,
     "landStepLevels": 0,
