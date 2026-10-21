@@ -139,346 +139,612 @@
     "cost": 1,
     "pool": [
       {
-        "kind": "Piece",
         "id": "smalltree",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
-        "id": "flower_01",
-        "weight": 10,
-        "unlockLevel": 0
-      },
-      {
-        "kind": "Piece",
-        "id": "flower_02",
-        "weight": 10,
-        "unlockLevel": 0
-      },
-      {
-        "kind": "Piece",
         "id": "treestump",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "pinetree",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "fallentrunk",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "haystack",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "firepit",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "tipitent",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "campingtentfbx",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "totem",
+        "kind": "Piece",
         "weight": 1,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "sun",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "moon",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "snowflake",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "woodenstool",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "groundlantern",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "lantern",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "crate",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "pot",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "chest",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "stove",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "rockingchair",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "well",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "retrotv",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "retrocomputer",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "bunny",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "pig",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "cat",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "dog",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "carrot",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "peach",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "bamboo",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "dinofossil",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "jackolantern",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "skull",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "witchhat",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 0
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "starfish",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "buoy",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "anchor",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "parasol",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "sailboat",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "PropellorBoat",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "lighthouse",
+        "kind": "Piece",
         "weight": 1,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "radio",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "handgesture_handshake",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "handgesture_peace",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "handgesture_thumbsup",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "handgesture_wavinghand",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 21
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "snowman",
+        "kind": "Piece",
         "weight": 1,
-        "unlockLevel": 48
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "trafficcone",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 75
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "barricade",
+        "kind": "Piece",
         "weight": 10,
-        "unlockLevel": 75
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "castlepillar",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 75
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "classicalpillar",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 75
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "torigate",
+        "kind": "Piece",
         "weight": 5,
-        "unlockLevel": 75
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "knighthelmet",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 75
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "japanesedevilmask",
+        "kind": "Piece",
         "weight": 2,
-        "unlockLevel": 75
+        "minLevel": 0
       },
       {
-        "kind": "Piece",
         "id": "castle",
+        "kind": "Piece",
         "weight": 1,
-        "unlockLevel": 75
+        "minLevel": 0
+      },
+      {
+        "id": "luckycat",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "telescope",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "moai",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "guidinglantern",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "bluebell",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "talltree",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "fruittree",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "sprout",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "bloom",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "blossom",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "wildflower",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "daisy",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "cactus",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "palmtree",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "squaredpotwithledge",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "squaredpot",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "widepot",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "cloud",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "turbine_02",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "synth",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "skateboard",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "sidetable",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "officechair",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "lemon",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "hut",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "foldingchair",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "eggplant",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "clam",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "beetroot",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "bed",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "bassguitar",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "armchair",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "apple",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "chicken",
+        "kind": "Piece",
+        "weight": 1,
+        "minLevel": 0
+      }
+    ],
+    "scripted": [
+      {
+        "id": "campingtentfbx",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "groundlantern",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "sidetable",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "cat",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "squaredpotwithledge",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "daisy",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "luckycat",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "weatherball",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "pinetree",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "skateboard",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "stove",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "radio",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 21
       }
     ]
   },
