@@ -13,10 +13,8 @@
     "defaultCoinBase": 100,
     "defaultCoinPerLevel": 5,
     "defaultCoinMax": 300,
-    "defaultTokenEvery": 1,
-    "landBase": 2,
-    "landStepLevels": 0,
-    "landMax": 2,
+    "tokensPerWin": 1.33,
+    "landPerWin": 1.35,
     "tileMoveUnlockLevel": 10,
     "vendingIntroLevel": 1,
     "vendingTeachLevel": 2,
@@ -1120,7 +1118,7 @@
         {
           "kind": "Coins",
           "id": "",
-          "amount": 500
+          "amount": 200
         }
       ]
     },
@@ -1296,7 +1294,7 @@
         {
           "kind": "Coins",
           "id": "",
-          "amount": 500
+          "amount": 200
         },
         {
           "kind": "Token",
@@ -1542,13 +1540,13 @@
       "tutorial": "2",
       "reward": [
         {
-          "kind": "Coins",
-          "id": "",
-          "amount": 500
-        },
-        {
           "kind": "Piece",
           "id": "vending",
+          "amount": 1
+        },
+        {
+          "kind": "Token",
+          "id": "",
           "amount": 1
         }
       ]
@@ -1767,12 +1765,12 @@
         {
           "kind": "Coins",
           "id": "",
-          "amount": 500
+          "amount": 200
         },
         {
           "kind": "Token",
           "id": "",
-          "amount": 1
+          "amount": 2
         }
       ]
     },
@@ -2147,12 +2145,12 @@
         {
           "kind": "Coins",
           "id": "",
-          "amount": 500
+          "amount": 200
         },
         {
           "kind": "Token",
           "id": "",
-          "amount": 1
+          "amount": 2
         }
       ]
     },
@@ -2559,7 +2557,18 @@
       "starTwo": 11,
       "maxMoves": 14,
       "tutorial": "",
-      "reward": []
+      "reward": [
+        {
+          "kind": "Coins",
+          "id": "",
+          "amount": 200
+        },
+        {
+          "kind": "Token",
+          "id": "",
+          "amount": 2
+        }
+      ]
     },
     {
       "name": "L07_Dunes",
