@@ -24,8 +24,8 @@
     "hintCost": 50,
     "undoCost": 50,
     "undosFree": 1,
-    "autoHintIdleSeconds": 3,
-    "autoHintLevels": 5
+    "autoHintIdleSeconds": 8,
+    "autoHintLevels": 10
   },
   "levels": [
     "L01_Homestead",
