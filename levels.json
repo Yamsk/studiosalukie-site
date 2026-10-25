@@ -14,7 +14,7 @@
     "defaultCoinPerLevel": 5,
     "defaultCoinMax": 300,
     "tokensPerWin": 1.33,
-    "landPerWin": 1.35,
+    "landPerWin": 3.25,
     "tileMoveUnlockLevel": 10,
     "vendingIntroLevel": 1,
     "vendingTeachLevel": 2,
