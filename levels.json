@@ -701,6 +701,12 @@
         "minLevel": 0
       },
       {
+        "id": "fallentrunk",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
         "id": "squaredpotwithledge",
         "kind": "Piece",
         "amount": 1,
@@ -726,12 +732,6 @@
       },
       {
         "id": "pinetree",
-        "kind": "Piece",
-        "amount": 1,
-        "minLevel": 0
-      },
-      {
-        "id": "skateboard",
         "kind": "Piece",
         "amount": 1,
         "minLevel": 0
