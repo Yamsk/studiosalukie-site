@@ -15,6 +15,7 @@
     "defaultCoinMax": 300,
     "tokensPerWin": 1.33,
     "landPerWin": 2.75,
+    "recyclePerToken": 3,
     "tileMoveUnlockLevel": 10,
     "vendingIntroLevel": 1,
     "vendingTeachLevel": 2,
@@ -24,7 +25,7 @@
     "hintCost": 50,
     "undoCost": 50,
     "undosFree": 1,
-    "autoHintIdleSeconds": 8,
+    "autoHintIdleSeconds": 5,
     "autoHintLevels": 10
   },
   "levels": [
