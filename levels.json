@@ -689,7 +689,7 @@
         "minLevel": 0
       },
       {
-        "id": "sidetable",
+        "id": "treestump",
         "kind": "Piece",
         "amount": 1,
         "minLevel": 0
@@ -701,7 +701,7 @@
         "minLevel": 0
       },
       {
-        "id": "fallentrunk",
+        "id": "campingtentfbx",
         "kind": "Piece",
         "amount": 1,
         "minLevel": 0
@@ -726,12 +726,6 @@
       },
       {
         "id": "weatherball",
-        "kind": "Piece",
-        "amount": 1,
-        "minLevel": 0
-      },
-      {
-        "id": "pinetree",
         "kind": "Piece",
         "amount": 1,
         "minLevel": 0
