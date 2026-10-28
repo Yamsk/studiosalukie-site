@@ -731,6 +731,12 @@
         "minLevel": 0
       },
       {
+        "id": "pinetree",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
         "id": "stove",
         "kind": "Piece",
         "amount": 1,
