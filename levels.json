@@ -683,19 +683,19 @@
         "minLevel": 0
       },
       {
-        "id": "groundlantern",
-        "kind": "Piece",
-        "amount": 1,
-        "minLevel": 0
-      },
-      {
         "id": "treestump",
         "kind": "Piece",
         "amount": 1,
         "minLevel": 0
       },
       {
-        "id": "cat",
+        "id": "groundlantern",
+        "kind": "Piece",
+        "amount": 1,
+        "minLevel": 0
+      },
+      {
+        "id": "luckycat",
         "kind": "Piece",
         "amount": 1,
         "minLevel": 0
@@ -719,25 +719,7 @@
         "minLevel": 0
       },
       {
-        "id": "luckycat",
-        "kind": "Piece",
-        "amount": 1,
-        "minLevel": 0
-      },
-      {
         "id": "weatherball",
-        "kind": "Piece",
-        "amount": 1,
-        "minLevel": 0
-      },
-      {
-        "id": "pinetree",
-        "kind": "Piece",
-        "amount": 1,
-        "minLevel": 0
-      },
-      {
-        "id": "stove",
         "kind": "Piece",
         "amount": 1,
         "minLevel": 0
